@@ -2,8 +2,81 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--beige);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 300;
+}
+
+.logo {
+  width: 200px;
+  padding: 20px;
+}
+
+.logo img {
+  width: 100%;
 }
 
 .menu ul {
   display: flex;
+}
+
+.menu ul a {
+  padding: 20px;
+  font-family: var(--body-font);
+  font-weight: bold;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.burger-menu .line {
+  width: 40px;
+  height: 4px;
+  background-color: var(--marron);
+  margin: 8px;
+  transition: all 0.3s ease;
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--beige); /* couleur de fond du menu */
+  padding: 20px; /* ajout de marge intérieure pour l'esthétique */
+  margin-top: 20px;
+}
+
+.menu.open {
+  display: flex; /* afficher le menu lorsque la classe open est présente */
+  flex-direction: column; /* afficher les éléments du menu verticalement */
+  align-items: flex-end; /* aligner les éléments à droite */
+}
+
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .burger-menu.open .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .burger-menu.open .line:nth-child(2) {
+    opacity: 0;
+  }
+  .burger-menu.open .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+@media screen and (min-width: 769px) {
+  .menu {
+    display: flex; /* Afficher le menu sur les grands écrans */
+  }
 }

@@ -1,0 +1,307 @@
+/*********************section 1*****************************************/
+.section div{
+    display: flex;
+  }
+  #section1 .container{
+    align-items: center;
+  
+  }
+  #section1 .container div{
+    width: 50%;
+  }
+  .phraseAccroche p{
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--marron);
+    line-height: 50px;
+    text-align: center;
+    padding: 0 20% ;
+    top: 300px;
+    left: -50px;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.819);
+}
+@media screen and (max-width: 768px) {
+  .section .container {
+    position: relative; /* Assure que les éléments positionnés à l'intérieur de la section respectent les coordonnées relatives à la section */
+  }
+
+  .section .illustrationAccueil img {
+    position: absolute; /* Positionne l'image par rapport à son conteneur */
+    top: 0; /* Positionne l'image au sommet de la section parente */
+    left: 0; /* Positionne l'image à gauche de la section parente */
+    width: 100%; /* L'image prendra toute la largeur de la section parente */
+    
+  }
+
+  .phraseAccroche p{
+    /* position: relative; Assure que le texte est positionné par rapport à la section parente */
+    z-index: 1; /* Place le texte au-dessus de l'image */
+    /* retouche le texte il est derrière l'image*/
+
+    text-align: center;
+    font-size: 16px;
+    color: var(--marron);
+    padding: 10px;
+    border-radius: 5px;
+    transform: translateX(60%); /* Centre le texte verticalement */
+    top: 5px;
+  }
+
+  .section .set {
+    display: none;
+  }
+}
+
+
+/*********************section 2*****************************************/
+#section2 {
+  margin-top: -56px;
+  z-index: 200;
+  position: relative;
+  
+}
+#section2 .container{
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#section2 .container .carre{
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 50px;
+}
+#section2 .container .carre img{
+  margin-top: 20px;
+}
+
+#section2 .container .carre h2{
+  font-family: var(--body-font);
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  margin: 0 10px;
+}
+#section2 .container .carre a {
+  font-family: var(--heading-font);
+  font-size: 20px;
+  margin-top: 20px;
+
+}
+
+@media screen and (max-width: 767px) {
+  #section2 {
+    margin-top: 0; /* Réinitialise la marge supérieure pour aligner correctement la section */
+  }
+
+  #section2 .container {
+    flex-direction: column; /* Change la direction du flux pour empiler les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+
+  #section2 .container .carre {
+    margin-bottom: 20px; /* Ajoute un espace entre chaque carré */
+    width: 50%; /* Réduit la largeur des carrés pour s'adapter à la largeur de l'écran */
+    text-align: center; /* Centre le contenu à l'intérieur des carrés */
+    justify-content: center;
+  }
+
+  #section2 .container .carre img {
+    margin-top: 10px; /* Réduit l'espace entre l'image et le texte */
+  }
+
+  #section2 .container .carre h2 {
+   font-size: 16px;
+  }
+
+  #section2 .container .carre a {
+    font-size: 16px; /* Réduit la taille de la police du lien */
+    margin-top: 10px; /* Réduit l'espace entre le titre et le lien */
+  }
+}
+
+/*********************section 3*****************************************/
+
+.section3{
+  margin-top: 100px;
+  margin-bottom: 100px;
+ 
+}
+.section3 h1{
+  color: var(--beige);
+  margin-top: 5px;
+}
+.containerVideo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;
+  background-image: url(../images/pellicule.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.videoYtb {
+  width: 70%;
+  height: 75%;
+  padding-top: 2%;
+  aspect-ratio: 1.63/1;
+  margin-bottom: 14px;
+}
+
+/* Media Query pour les appareils mobiles */
+@media only screen and (max-width: 768px) {
+  .containerVideo {
+    background-image: none; /* Pour que le fond d'écran disparaisse en mode mobile */
+    
+    
+  }
+  
+  .videoYtb {
+    width: 100%; /* Pour que la vidéo prenne 100% de la largeur de l'écran mobile */
+    height: auto; /* Pour que la hauteur de la vidéo soit ajustée de manière proportionnelle */
+    margin-bottom: 14px;
+  }
+  .section3 h1{
+    font-size: 16px;
+    text-align: center;
+    color: var(--marron);
+    
+  }
+}
+/* fin CSS section 3 */
+
+/*****section 6*************************/
+
+#section6 .container{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  
+}
+
+
+#section6 .container .carre{
+  overflow: hidden;
+
+}
+
+
+#section6 .container .realisations{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#section6 .container img{
+  width: 100%;
+  border-radius: 20px;
+}
+
+#section6 .container .carre {
+  position: relative;
+  overflow: hidden;
+}
+
+#section6 .container .carre .image-container img {
+  width: 100%;
+  display: block;
+}
+
+#section6 .container .carre .hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Utilise la largeur de l'image */
+  height: 100%; /* Utilise la hauteur de l'image */
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  color: #fff; /* Couleur du texte */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0; /* Initialement caché */
+  transition: opacity 0.3s ease; /* Animation de transition */
+  border-radius: 20px;
+
+}
+
+#section6 .container .carre:hover .hover-content {
+  opacity: 1; /* Fait apparaître le contenu de survol au survol */
+}
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+  #section6 .container .realisations {
+    grid-template-columns: 1fr;
+  }
+
+  .realisations {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+
+/*********************section7 *****************/
+.section7 {
+  position: relative;
+}
+.section7 .container1{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.section7 .container1 img{
+  width: 100%;
+}
+.section7 .slam{
+  border-radius: 25px;
+  width: 376px;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  right: 15%;
+  background: white;
+}
+.section7 h3{
+  margin-bottom: 20px;
+}
+.section7 p{
+  margin-bottom: 20px;
+}
+.section7 a{
+  display: inline-block;
+  margin-top: 10px;
+  
+}
+/* Media Query pour les appareils mobiles */
+@media only screen and (max-width: 768px) {
+  .section7 .container1 img {
+    display: none; /* Pour faire disparaître l'image sur les appareils mobiles */
+  }
+  .section7 .slam {
+    background: var(--beige); /* Pour changer le fond du texte en beige */
+    width: 100%; /* Pour que le conteneur de texte occupe toute la largeur */
+    right: 0; /* Pour aligner le texte à gauche sur les appareils mobiles */
+    padding: 10px; /* Ajustement des marges intérieures pour un meilleur affichage */
+    border-radius: 10px; /* Supprimer le rayon du bord pour un look plus propre */
+    position: static; /* Supprimer la position absolue pour que le texte suive l'ordre normal du flux */
+    
+
+  }
+}
+
+
